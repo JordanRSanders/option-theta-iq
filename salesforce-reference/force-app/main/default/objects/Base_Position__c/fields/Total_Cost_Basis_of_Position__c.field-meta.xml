@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Cost_Basis_of_Position__c</fullName>
+    <formula>(Total_Long_Option_Net_Debit__c +  Total_Short_Option_Net_Credit__c) * -1</formula>
+    <inlineHelpText>Total Long Option Net Debit and Total Short Option Net Credit added together.
+
+This is your MAXIMUM LOSS for the position.  You can&apos;t lose more than this, regardless of how far the stock drops.</inlineHelpText>
+    <label>Total Cost Basis of Position</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

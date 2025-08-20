@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Short_Option_Net_Credit__c</fullName>
+    <inlineHelpText>The Sum of all Short Option Order Principals - how much has been received to date from the short position</inlineHelpText>
+    <label>Total Short Option Net Credit</label>
+    <summarizedField>Short_Option_Top_Position__c.Option_Order_Principal__c</summarizedField>
+    <summaryForeignKey>Short_Option_Top_Position__c.Base_Position__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

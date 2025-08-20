@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Price_Mid_Calculated__c</fullName>
+    <formula>(Stock_Price_High_When_Order_Filled__c +  Stock_Price_Low_When_Order_Filled__c)/2</formula>
+    <label>Stock Price - Mid Calculated</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

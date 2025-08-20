@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Base_Position__c</members>
+        <members>Long_Option_Bottom_Position__c</members>
+        <members>Short_Option_Top_Position__c</members>
+        <members>Stock_Share_Bottom_Position__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>Base_Position__c-Base Position Layout</members>
+        <members>Long_Option_Bottom_Position__c-Long Option Bottom Position Layout</members>
+        <members>Short_Option_Top_Position__c-Short Option Top Position Layout</members>
+        <members>Stock_Share_Bottom_Position__c-Stock Share Bottom Position Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Base_Position_Record_Page</members>
+        <members>Short_Option_Top_Position_Record_Page</members>
+        <members>Long_Option_Bottom_Position_Record_Page</members>
+        <members>Stock_Share_Bottom_Position_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Option Theta IQ Profile</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Option_Theta_IQ_User</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SharingReason</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>WebLink</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <!--types>
+        <members>Option_Theta_IQ</members>
+        <members>OptionThetaIQ</members>
+        <members>DEVHUB_jbl6t4gljocbtqpvbanx</members>
+        <name>AppMenu</name>
+    </types!-->
+    <types>
+        <members>Option Theta IQ</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Base_Position__c.Close_Base_Position_Covered_Call</members>
+        <members>Base_Position__c.Choices_for_Underlying_Long_Call</members>
+        <members>Long_Option_Bottom_Position__c.Modify_Long_Option_Details</members>
+        <members>Short_Option_Top_Position__c.Redo_Extrinsic_Calculations</members>
+        <members>Base_Position__c.Close_PMCC_Base_Position</members>
+        <members>Quick Action Base_Position__c.Choices_for_Underlying_Stock_Share</members>
+        <members>Short_Option_Top_Position__c.Modify_Short_Option_Details</members>
+        <members>Base_Position__c.Choices_for_Underlying_Stock_Share</members>
+        <members>Base_Position__c.Update_Current_Market_Values </members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>LightningExperience</members>
+        <name>AppMenu</name>
+    </types>
+    <!--types>
+        <members>*</members>
+        <name>ValidationRule</name>
+    </types!-->
+    <version>64.0</version>
+</Package>

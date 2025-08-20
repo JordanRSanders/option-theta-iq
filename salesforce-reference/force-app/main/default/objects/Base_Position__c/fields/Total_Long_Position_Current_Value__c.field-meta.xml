@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Long_Position_Current_Value__c</fullName>
+    <inlineHelpText>Manually entered from your broker.  How much is your long position worth right now?</inlineHelpText>
+    <label>Total Long Position Current Value</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

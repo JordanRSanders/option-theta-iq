@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Long_Position_Profit_Loss__c</fullName>
+    <formula>Total_Long_Position_Net_Debit__c +  Total_Long_Position_Current_Value__c</formula>
+    <inlineHelpText>Total Long Position Net Debit + the Long Position Current Value: How much your long position worth minus how much you&apos;ve paid for it.  If Total Long Position Current Value is Blank, this will be blank</inlineHelpText>
+    <label>Total Long Position Profit/Loss</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

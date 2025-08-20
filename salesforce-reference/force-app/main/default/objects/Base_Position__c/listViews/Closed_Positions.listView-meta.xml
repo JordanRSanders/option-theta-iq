@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Positions</fullName>
+    <columns>NAME</columns>
+    <columns>Base_Position_Status__c</columns>
+    <columns>Total_Overall_Profit_Loss__c</columns>
+    <columns>Position_Total_Days__c</columns>
+    <columns>Total_ROI_Current__c</columns>
+    <columns>Total_ROI_Annualized__c</columns>
+    <columns>Position_Open_Date__c</columns>
+    <columns>Position_Running_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Base_Position_Status__c</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Closed Positions</label>
+</ListView>

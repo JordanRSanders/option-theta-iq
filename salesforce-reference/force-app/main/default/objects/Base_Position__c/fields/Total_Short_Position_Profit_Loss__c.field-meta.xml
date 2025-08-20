@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Short_Position_Profit_Loss__c</fullName>
+    <formula>Total_Short_Position_Open_Current_Value__c +  Total_Short_Option_Net_Credit__c</formula>
+    <inlineHelpText>The current value of your short position plus the total net credits from all your previous short positions combined. If Total Short Position Open Current Value is Blank, this will be blank</inlineHelpText>
+    <label>Total Short Position Profit/Loss</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

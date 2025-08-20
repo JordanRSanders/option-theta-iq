@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Initial_Capital_Invested__c</fullName>
+    <description>The initial max loss - the cost of the initial long option minus the first short position premium.</description>
+    <label>Total Initial Capital Invested</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

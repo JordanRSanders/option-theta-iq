@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Long_Position_Net_Debit__c</fullName>
+    <formula>IF( ISPICKVAL( Stock_or_Long_Call__c , &apos;Long Call Option&apos;),  Total_Long_Option_Net_Debit__c ,  Total_Stock_Share_Net_Debit__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the Net Debit on your Long Position. If this Base Position has an underlying of &quot;Long Call Option&quot; it is the sum of all Long Option Order Principals.   If the underlying is &quot;Stock/Equity&quot; it is the Sum of all Stock Share Order Principals.</inlineHelpText>
+    <label>Total Long Position Net Debit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

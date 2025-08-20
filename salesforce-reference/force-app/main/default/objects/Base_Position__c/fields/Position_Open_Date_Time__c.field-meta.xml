@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Open_Date_Time__c</fullName>
+    <label>Position Open Date Time</label>
+    <summarizedField>Short_Option_Top_Position__c.Order_Date_and_Time_Filled__c</summarizedField>
+    <summaryForeignKey>Short_Option_Top_Position__c.Base_Position__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

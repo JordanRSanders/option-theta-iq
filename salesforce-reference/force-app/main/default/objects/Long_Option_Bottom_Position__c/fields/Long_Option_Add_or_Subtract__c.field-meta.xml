@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Long_Option_Add_or_Subtract__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Long_Option_Action__c, &apos;Buy to Open&apos;), -1, 1)</formula>
+    <label>Long Option Add or Subtract</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

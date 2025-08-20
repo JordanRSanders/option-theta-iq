@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>formUnderlyingPositionName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Ticker_Symbol__c} &amp; &apos; - &apos; &amp; TEXT({!$Record.Stock_or_Long_Call__c}) &amp; &apos; - &apos; &amp; TEXT({!$Record.Position_Open_Date__c})</expression>
+    </formulas>
+    <interviewLabel>Underlying Position - Generate Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Base Position - Generate Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Base_Position_Set_Name</name>
+        <label>Base Position Set Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>formUnderlyingPositionName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Base_Position_Set_Name</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Ticker_Symbol__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Stock_or_Long_Call__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <object>Base_Position__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

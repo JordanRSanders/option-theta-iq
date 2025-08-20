@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Long_Option_Net_Debit__c</fullName>
+    <inlineHelpText>The Sum of all Long Option Order Principals - how much has been paid to date for the long position</inlineHelpText>
+    <label>Total Long Option Net Debit</label>
+    <summarizedField>Long_Option_Bottom_Position__c.Long_Option_Order_Principal__c</summarizedField>
+    <summaryForeignKey>Long_Option_Bottom_Position__c.Base_Position__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

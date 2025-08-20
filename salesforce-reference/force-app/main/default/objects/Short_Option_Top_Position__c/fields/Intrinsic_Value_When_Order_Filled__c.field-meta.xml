@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intrinsic_Value_When_Order_Filled__c</fullName>
+    <formula>Stock_Price_Mid_Calculated__c -  Option_Strike__c</formula>
+    <label>Intrinsic Value When Order Filled</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

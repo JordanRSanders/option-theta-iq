@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Stock_Share_Net_Debit__c</fullName>
+    <inlineHelpText>SUM of all related Stock Share Order Principals</inlineHelpText>
+    <label>Total Stock Share Net Debit</label>
+    <summarizedField>Stock_Share_Bottom_Position__c.Stock_Share_Order_Principal__c</summarizedField>
+    <summaryForeignKey>Stock_Share_Bottom_Position__c.Base_Position__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

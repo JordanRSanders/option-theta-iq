@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>formLongOptionBottomPositionName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Base_Position__r.Ticker_Symbol__c} &amp; &apos;-&apos; &amp; TEXT({!$Record.Long_Option_Action__c}) &amp; &apos;-&apos; &amp; TEXT({!$Record.Long_Option_Number_of_Contracts__c}) &amp; &apos;-&apos; &amp;  TEXT({!$Record.Long_Option_Expiration_Date__c}) &amp; &apos;-&apos; &amp; TEXT({!$Record.Long_Option_Strike_Price__c})</expression>
+    </formulas>
+    <interviewLabel>Long Option Bottom Position - Generate Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Long Option Bottom Position - Generate Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Long_Option_Bottom_Position_Set_Name</name>
+        <label>Long Option Bottom Position - Set Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>formLongOptionBottomPositionName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Long_Option_Bottom_Position_Set_Name</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Long_Option_Expiration_Date__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Long_Option_Number_of_Contracts__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Long_Option_Strike_Price__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Base_Position__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <object>Long_Option_Bottom_Position__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

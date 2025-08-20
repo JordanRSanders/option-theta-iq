@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_ROI_Annualized__c</fullName>
+    <formula>Total_ROI_Current__c *  Position_Total_Days_Periods_in_Year__c</formula>
+    <inlineHelpText>The current ROI * Position &quot;Total Days&quot; Periods in year (i.e. the fraction of the year the position took to achieve that ROI)</inlineHelpText>
+    <label>Total ROI - Annualized</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

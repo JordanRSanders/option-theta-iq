@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Short_Extrinsic_Realized__c</fullName>
+    <inlineHelpText>Summary of the Extrinsic value from all short option positions together.</inlineHelpText>
+    <label>Total Short Extrinsic Realized</label>
+    <summarizedField>Short_Option_Top_Position__c.Total_Extrinsic_at_Expiration_or_Roll__c</summarizedField>
+    <summaryForeignKey>Short_Option_Top_Position__c.Base_Position__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

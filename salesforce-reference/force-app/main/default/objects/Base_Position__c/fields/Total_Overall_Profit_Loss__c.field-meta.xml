@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Overall_Profit_Loss__c</fullName>
+    <formula>Total_Long_Position_Profit_Loss__c +  Total_Short_Position_Profit_Loss__c</formula>
+    <inlineHelpText>Total Long Position Profit/Loss + Total Short Position Profit/Loss.  If either of those values are blank, this will be blank.</inlineHelpText>
+    <label>Total Overall Profit/Loss</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

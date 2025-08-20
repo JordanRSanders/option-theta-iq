@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>formShorOptionTopPositionName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Ticker_Symbol__c} &amp; &apos;-&apos; &amp; TEXT({!$Record.Option_Action__c}) &amp; &apos;-&apos; &amp; TEXT({!$Record.Number_of_Contracts__c}) &amp; &apos;-&apos; &amp; TEXT({!$Record.Option_Expiration_Date__c}) &amp; &apos;-&apos; &amp; TEXT({!$Record.Option_Strike__c})</expression>
+    </formulas>
+    <interviewLabel>Short Option Top Position - Generate Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Short Option Top Position - Generate Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Short_Option_Top_Position_Set_Name</name>
+        <label>Short Option Top Position - Set Name</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>formShorOptionTopPositionName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Short_Option_Top_Position_Set_Name</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Option_Action__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Number_of_Contracts__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Option_Expiration_Date__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <filters>
+            <field>Option_Strike__c</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <object>Short_Option_Top_Position__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_or_Long_Call__c</fullName>
+    <label>Stock or Long Call</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stock/Equity</fullName>
+                <default>false</default>
+                <label>Stock/Equity</label>
+            </value>
+            <value>
+                <fullName>Long Call Option</fullName>
+                <default>false</default>
+                <label>Long Call Option</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
